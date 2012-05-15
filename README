@@ -1,0 +1,7 @@
+INSTALL : 
+
+> make
+
+USE : 
+
+./chp <file_path>
