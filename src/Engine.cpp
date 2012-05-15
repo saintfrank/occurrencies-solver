@@ -59,7 +59,7 @@ bool Engine::start(){
     bool result = false;
     
     
-    for (unsigned int i = 0 ; i < (m_problem.m_longest_set*m_problem.m_longest_set*m_problem.m_longest_set*m_problem.m_longest_set*m_problem.m_longest_set); i++)
+    for (int i = 0 ; i < (m_problem.m_longest_set*m_problem.m_longest_set*m_problem.m_longest_set*m_problem.m_longest_set*m_problem.m_longest_set); i++)
     {
         BOOST_FOREACH( IRString::Ptr s, Ts )
         {
@@ -244,7 +244,7 @@ bool Engine::filter(std::vector<IRString::Ptr> vect, std::string s_initial){
                 
                 // With this loop I guarantee that for every possible occurence of this string is checked whether it valuable
                 
-                BOOST_FOREACH( int off, positions )
+                BOOST_FOREACH( unsigned int off, positions )
                 {
                     #ifdef DEBUG_ALGO 
                     std::cout << "Filter 3 : "<< t->getElement() << ":" << s << " searching if possible this next " << vect.at(i+1)->getElement() << " at " << off << s_initial.substr(off) << std::endl;
