@@ -251,20 +251,22 @@ bool Engine::filter(std::vector<IRString::Ptr> vect, std::string s_initial){
                     #endif
                     
                     if(off != s_initial.size()-1)
+                    {
                       if( hasOne( vect.at(i+1), s_initial.substr(off+1) ) )
-                    {
-                        #ifdef DEBUG_ALGO
-                        std::cout << "Filter 4 : found " << s << std::endl;
-                        #endif
-                        
-                        found = true;
-                        
-                    }
-                    else
-                    {
-                        #ifdef DEBUG_ALGO
-                        std::cout << "Filter 4 : not found " << s << std::endl;
-                        #endif
+                        {
+                            #ifdef DEBUG_ALGO
+                            std::cout << "Filter 4 : found " << s << std::endl;
+                            #endif
+                            
+                            found = true;
+                            
+                        }
+                        else
+                        {
+                            #ifdef DEBUG_ALGO
+                            std::cout << "Filter 4 : not found " << s << std::endl;
+                            #endif
+                        }
                     }
                 }
             
