@@ -1,7 +1,11 @@
-Chp
+Computationally hard problem sample
 ===============
 
-Hard problem solver.
+A C++ implementation for a computationally hard problem solver.
+
+The problem takes data/\*.SWE files as input and requires data/\*.SOL as solutions.
+
+DTU - 2013
 
 
 Requirements
