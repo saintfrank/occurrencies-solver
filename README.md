@@ -1,6 +1,9 @@
 Computationally hard problem sample
 ===============
 
+![gif](https://raw.githubusercontent.com/saintfrank/occurrencies-solver/master/challenge-run.gif)
+
+
 A C++ implementation for a computationally hard problem solver.
 
 The problem takes data/\*.SWE files as input and requires data/\*.SOL as solutions.
