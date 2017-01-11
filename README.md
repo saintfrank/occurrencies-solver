@@ -4,10 +4,10 @@ Computationally hard problem sample
 The solution aims at simplicity and bare-minimal overhead, while striving to provide the required functionalities with an  API that is as clear and immediate as possible. 
 
 - communication components are in [/src](src)
-- API is documented in components' header files [ciao.h](src/Engine.cpp)
-- ```main.c``` illustrates the overall solution's usage
-- ```metric.h``` verifies correctness and performs metrics
-- ```doc/ABOUT``` discusses choices and containes notes
+- API is documented in components' header files [framepool.h](src/framepool.h), [producer.h](src/producer.h), and [consumer.h](src/consumer.h)
+- [main.c](main.c) illustrates the overall solution's usage
+- [metric.h](metric.h) verifies transfer correctness and performs metrics
+- [doc/ABOUT](/doc/ABOUT) discusses choices and containes notes
 
 
 
@@ -23,19 +23,19 @@ Deliverables
 ------------
 
 1. The working code is for the communication component(s) is source ```/src```, which contains the three components  ```Producer```, ```Consumer``` and ```Framepool```.
-2. The binary is airtime-challenge, compiled by make. It lasts 10 seconds, and get_screen_data and encode_and_send_screen_data are called periodically. Regarding their implementation they are hereby used to perform metrics and validation which are displayed at the end of binary execution. 
-3. A description of the proceeding and choices, together with implementation notes, is present in the document ```doc/ABOUT```. 
-The parts of code that I am most proud are most the ones that I have managed to not to write. ```/src``` remained explicit and simple, while providing the expected functionality.  
+2. The binary is airtame-challenge, compiled by make. It lasts 10 seconds, and get_screen_data and encode_and_send_screen_data are called periodically. Regarding their implementation they are hereby used to perform metrics and validation which are displayed at the end of binary execution. 
+3. A description of the proceeding and choices, together with implementation notes, is present in the document [doc/ABOUT](/doc/ABOUT) . 
+The parts of code that I am most proud are most the ones that I have managed to not to write: ```/src``` remained simple to read and use, small, very straightforward with data, while providing the expected functionality.  
 Additionally I remain satisfied about framepool's simplicity, no-copy and very reduced overhead.
 
 Requirements
 ------------
 
-1. Independent - yes, using pthread. Synchronization is internal to the framepool component. Number of additional frames that can be produced is set by macro ```POOL_SIZE``` in ```framepool.h```
+1. Independent - yes, using pthread. Synchronization is internal to the framepool component. Number of additional frames that can be produced is set by macro ```POOL_SIZE``` in [framepool.h](src/framepool.h)
 2. Decoupled - yes, producer and consumer are overall independent
 3. Can repeat - yes, the repeat function is implemented with zero overhead by the copy of reference to the old frame. implemented by framepool in function ```framepool_produce```, when called with argument ```NULL```
 4. C/C++ - yes, C with pthreads compiled on Linux with gcc (5.1, x86). Makefile provided. No libraries.
-5. Reasonable performance - yes. To guarantee this, the logic and data structures are all based on a no-copy strategy, random access arrays (circular) and very simple reference handling and increment. Further improvements described in ```doc/ABOUT````
+5. Reasonable performance - yes. To guarantee this, the logic and data structures are all based on a no-copy strategy, random access arrays (circular) and very simple reference handling and increment. Further improvements described in [doc/ABOUT](/doc/ABOUT)
 6. Constant frame size. - yes
 
 
@@ -45,7 +45,7 @@ API
 
 The API is illustrated and documented within the code, in the header files with comment and ASCII description. 
 
-Further more it is also exemplified through the ```main.c``` file, which shows the lifecycle and a typical usage, as can be summarized here:
+Further more it is also exemplified through the [main.c](main.c) file, which shows the lifecycle and a typical usage, as can be summarized here:
 
 ```C
 
