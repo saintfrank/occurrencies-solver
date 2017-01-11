@@ -3,6 +3,12 @@ Computationally hard problem sample
 
 The solution aims at simplicity and bare-minimal overhead, while striving to provide the required functionalities with an  API that is as clear and immediate as possible. 
 
+- communication components are in [/src](src)
+- API is documented in components' header files [ciao.h](src/Engine.cpp)
+- ```main.c``` illustrates the overall solution's usage
+- ```metric.h``` verifies correctness and performs metrics
+- ```doc/ABOUT``` discusses choices and containes notes
+
 
 
 Usage
@@ -10,7 +16,7 @@ Usage
 
 Essentially compiling on Linux with ```gcc``` and ```make``` and running the binary, from any location. 
 
-![gif](https://raw.githubusercontent.com/saintfrank/occurrencies-solver/master/challenge-sample.gif)
+![gif](challenge-sample.gif)
 
 
 Deliverables
