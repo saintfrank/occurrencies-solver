@@ -1,7 +1,7 @@
 Computationally hard problem sample
 ===============
 
-![gif](https://raw.githubusercontent.com/saintfrank/occurrencies-solver/master/challenge-run.gif)
+![gif](https://raw.githubusercontent.com/saintfrank/occurrencies-solver/master/challenge-sample.gif)
 
 
 A C++ implementation for a computationally hard problem solver.
