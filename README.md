@@ -1,7 +1,33 @@
 Computationally hard problem sample
 ===============
 
+Usage
+-----
+
+Essentially compiling on Linux with ```make``` and running the binary. 
+
 ![gif](https://raw.githubusercontent.com/saintfrank/occurrencies-solver/master/challenge-sample.gif)
+
+
+API
+---
+
+The API is illustrated and documented within the code, in the header files with comment and ASCII description. 
+
+Further more it is also exemplified through the ```main.c``` file, which shows the lifecycle and a typical usage, as can be summarized here:
+
+```C
+
+adsfaf
+int 3 
+```
+
+Essentially compiling on Linux with ```make``` and running the binary. 
+
+![gif](https://raw.githubusercontent.com/saintfrank/occurrencies-solver/master/challenge-sample.gif)
+
+
+
 
 
 A C++ implementation for a computationally hard problem solver.
